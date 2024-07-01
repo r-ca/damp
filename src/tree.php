@@ -9,7 +9,10 @@
 </head>
 <body>
     <div class="container">
-        <h1>Directory Tree</h1>
+        <div class="title-container">
+            <h1>Directory Tree</h1>
+            <p class="subtitle">View the directory tree of the current directory</p>
+            </div>
         <div id="directoryTree"></div>
     </div>
 
