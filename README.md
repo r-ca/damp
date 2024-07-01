@@ -30,5 +30,16 @@ docker compose up --build
 - XAMPPと異なる挙動が多数あります
 - 一部ChatGPT/GithubCopilotChatのコードをベースに作成されています(フロントなど)
 
+<details>
+    <summary>メモ</summary>
+
+
+カラーパレット（Colormind)：
+- `#4C4341`
+- `#6A9289`
+- `#76A0A3`
+- `#BACCBC`
+- `#D16144`
+</details>
 
 WIP
