@@ -1,8 +1,16 @@
 /* style.css */
+:root {
+    --color-dark-brown: #4C4341;
+    --color-teal-green: #6A9289;
+    --color-light-teal: #76A0A3;
+    --color-pale-green: #BACCBC;
+    --color-bright-red: #D16144;
+}
+
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #fff5f7;
-    color: #333;
+    background-color: var(--color-pale-green);
+    color: var(--color-dark-brown);
     margin: 0;
     padding: 0;
     display: flex;
@@ -21,21 +29,21 @@ body {
 }
 
 h1 {
-    color: #f8bbd0;
+    color: var(--color-bright-red);
     font-size: 2.5em;
     text-align: center;
     margin-bottom: 10px;
 }
 
 .subtitle {
-    color: #f48fb1;
+    color: var(--color-teal-green);
     font-size: 1.2em;
     text-align: center;
     margin-bottom: 20px;
 }
 
 h2 {
-    color: #f06292;
+    color: var(--color-light-teal);
     font-size: 2em;
     margin-bottom: 10px;
 }
@@ -51,21 +59,23 @@ h2 {
 }
 
 .service-links a {
-    color: #c2185b;
-    text-decoration: underline;
-    padding: 10px;
-    transition: color 0.3s ease;
+    color: var(--color-dark-brown);
+    text-decoration: none;
+    border-bottom: 2px solid var(--color-dark-brown);
+    padding: 5px 0;
+    transition: color 0.3s ease, border-color 0.3s ease;
 }
 
 .service-links a:hover {
-    color: #880e4f;
+    color: var(--color-bright-red);
+    border-color: var(--color-bright-red);
 }
 
 footer {
     text-align: center;
     padding: 10px 0;
-    background-color: #ffe4e1;
-    color: #333;
+    background-color: var(--color-teal-green);
+    color: #ffffff;
     font-size: 1em;
     position: relative;
     bottom: 0;
