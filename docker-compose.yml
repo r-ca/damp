@@ -16,7 +16,7 @@ services:
   web:
     build:
       context: .
-      dockerfile: Dockerfile/apache/Dockerfile
+      dockerfile: dockerfile/apache/Dockerfile
     container_name: apache
     restart: always
     ports:
