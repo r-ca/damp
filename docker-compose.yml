@@ -1,6 +1,6 @@
 services:
   db:
-    image: mariadb:stable
+    image: mariadb:lts
     container_name: mariadb
     restart: always
     environment:
@@ -14,16 +14,16 @@ services:
       - db_data:/var/lib/mysql
     
   web:
-  image: php:7.4-apache
-  container_name: apache
-  restart: always
-  ports:
-    - "80:80"
-  volumes:
-    - ./src:/var/www/html
-    - ./volume/web/php.ini:/usr/local/etc/php/php.ini
-  depends_on:
-    - db
+    image: php:7.4-apache
+    container_name: apache
+    restart: always
+    ports:
+      - "80:80"
+    volumes:
+      - ./src:/var/www/html
+      - ./conf/web/php.ini:/usr/local/etc/php/php.ini
+    depends_on:
+      - db
 
 volumes:
   db_data:
