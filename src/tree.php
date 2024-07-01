@@ -16,7 +16,7 @@
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const data = <?php
-                function scanDirRecursive($dir) {
+                function scanDirRecursive($dir, $baseDir = '') {
                     $result = [];
                     $items = scandir($dir);
                     foreach ($items as $item) {
@@ -24,10 +24,11 @@
                             continue;
                         }
                         $path = $dir . DIRECTORY_SEPARATOR . $item;
+                        $relativePath = ltrim($baseDir . DIRECTORY_SEPARATOR . $item, DIRECTORY_SEPARATOR);
                         if (is_dir($path)) {
-                            $result[$item] = scanDirRecursive($path);
+                            $result[$item] = scanDirRecursive($path, $relativePath);
                         } else {
-                            $result[] = $item;
+                            $result[] = $relativePath;
                         }
                     }
                     return $result;
@@ -67,7 +68,7 @@
                             iconClass = 'fa-solid fa-image';
                         }
 
-                        li.innerHTML = `<a href="${fileName}" class="file"><i class="${iconClass}"></i> ${fileName}</a>`;
+                        li.innerHTML = `<a href="${fileName}" class="file"><i class="${iconClass}"></i> ${fileName.split('/').pop()}</a>`;
                         ul.appendChild(li);
                     }
                 }
