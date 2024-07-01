@@ -15,7 +15,8 @@ $serviceLinks = [
 </head>
 <body>
     <div class="container">
-        <h1>Docker PHP Environment</h1>
+        <h1>DAMP</h1>
+        <p class="subtitle">Docker-based Apache, MySQL, and PHP Environment</p>
         <h2>Service Links</h2>
         <ul class="service-links">
             <?php foreach ($serviceLinks as $name => $link): ?>
@@ -23,5 +24,8 @@ $serviceLinks = [
             <?php endforeach; ?>
         </ul>
     </div>
+    <footer>
+        <p>PHP Version: <?php echo phpversion(); ?></p>
+    </footer>
 </body>
 </html>

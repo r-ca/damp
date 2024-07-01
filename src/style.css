@@ -1,54 +1,73 @@
-/* styles.css */
+/* style.css */
 body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    background-color: #f4f4f9;
+    font-family: 'Arial', sans-serif;
+    background-color: #fff5f7;
     color: #333;
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .container {
-    width: 90%;
-    max-width: 600px;
-    background: #fff;
+    max-width: 800px;
+    margin: 50px auto;
     padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    flex: 1;
 }
 
 h1 {
+    color: #f8bbd0;
+    font-size: 2.5em;
+    text-align: center;
     margin-bottom: 10px;
-    font-size: 24px;
-    color: #333;
+}
+
+.subtitle {
+    color: #f48fb1;
+    font-size: 1.2em;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 h2 {
-    margin-bottom: 20px;
-    font-size: 20px;
-    color: #666;
+    color: #f06292;
+    font-size: 2em;
+    margin-bottom: 10px;
 }
 
 .service-links {
     list-style: none;
     padding: 0;
+    text-align: center;
 }
 
 .service-links li {
-    margin: 10px 0;
+    margin: 20px 0;
 }
 
 .service-links a {
-    text-decoration: none;
-    color: #007BFF;
-    font-size: 18px;
+    color: #c2185b;
+    text-decoration: underline;
+    padding: 10px;
     transition: color 0.3s ease;
 }
 
 .service-links a:hover {
-    color: #0056b3;
+    color: #880e4f;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #ffe4e1;
+    color: #333;
+    font-size: 1em;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
