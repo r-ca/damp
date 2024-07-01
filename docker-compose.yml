@@ -26,7 +26,6 @@ services:
     depends_on:
       - db
       - phpmyadmin
-
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
     container_name: phpmyadmin
@@ -34,6 +33,7 @@ services:
     environment:
       PMA_HOST: db
       MYSQL_ROOT_PASSWORD: root
-
+    volumes:
+      - ./conf/phpmyadmin/config.inc.php:/etc/phpmyadmin/config.inc.php
 volumes:
   db_data:
