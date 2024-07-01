@@ -1,3 +1,8 @@
+<div align="center">
+    <img src="/static/logo.png" alt="Logo">
+</div>
+
+
 # DAMP
 Docker-based Apache, MySQL and PHP Environment
 
