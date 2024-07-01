@@ -3,7 +3,8 @@
 $serviceLinks = [
     'Web Application' => '/',
     'phpMyAdmin' => '/phpmyadmin/',
-    'phpinfo' => '/phpinfo.php'
+    'phpinfo' => '/phpinfo.php',
+    'Builtin FileTree' => '/tree.php',
 ];
 ?>
 <!DOCTYPE html>
