@@ -26,14 +26,14 @@ services:
     depends_on:
       - db
       - phpmyadmin
-
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
     container_name: phpmyadmin
     restart: always
     environment:
       PMA_HOST: db
-      PMA_PORT: 3306
-      PMA_ABSOLUTE_URI: http://localhost/phpmyadmin
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - ./conf/phpmyadmin/config.inc.php:/etc/phpmyadmin/config.inc.php
 volumes:
   db_data:
