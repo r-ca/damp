@@ -105,5 +105,9 @@
             }
         });
     </script>
+        
+    <footer>
+        <p>php version: <?php echo phpversion(); ?></p>
+    </footer>
 </body>
 </html>
