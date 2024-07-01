@@ -2,7 +2,8 @@
 // Define service links
 $serviceLinks = [
     'Web Application' => '/',
-    'phpMyAdmin' => '/phpmyadmin/'
+    'phpMyAdmin' => '/phpmyadmin/',
+    'phpinfo' => '/phpinfo.php'
 ];
 ?>
 <!DOCTYPE html>
