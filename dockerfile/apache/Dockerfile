@@ -2,7 +2,7 @@
 FROM php:7.4-apache
 
 # Enable Apache modules
-RUN a2enmod proxy proxy_http
+RUN a2enmod proxy proxy_http headers
 
 # Copy the custom Apache configuration file
 COPY conf/apache.conf /etc/apache2/sites-available/000-default.conf
