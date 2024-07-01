@@ -17,8 +17,10 @@ $serviceLinks = [
 </head>
 <body>
     <div class="container">
-        <h1>DAMP</h1>
-        <p class="subtitle">Docker-based Apache, MySQL, and PHP Environment</p>
+        <div class="title-container">
+            <h1>DAMP</h1>
+            <p class="subtitle">Docker-based Apache, MySQL, and PHP Environment</p>
+        </div>
         <h2>Service Links</h2>
         <ul class="service-links">
             <?php foreach ($serviceLinks as $name => $link): ?>
