@@ -1,21 +1,4 @@
 <?php
-// Get system information
-$systemInfo = php_uname();
-
-// Get docker-compose service names
-$dockerComposeServices = [
-    'apache',
-    'mariadb',
-    'phpmyadmin'
-];
-
-// Get container states
-$dockerContainers = [];
-foreach ($dockerComposeServices as $service) {
-    $status = '';
-    exec("docker inspect -f '{{.State.Status}}' {$service}", $status);
-    $dockerContainers[$service] = $status[0];
-}
 
 // Define service links
 $serviceLinks = [
@@ -41,27 +24,6 @@ $serviceLinks = [
 <body>
     <div class="container">
         <h1>Docker PHP Environment</h1>
-        
-        <h2>System Information</h2>
-        <p><?php echo $systemInfo; ?></p>
-
-        <h2>Container States</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Container Name</th>
-                    <th>Status</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php foreach ($dockerContainers as $name => $status): ?>
-                <tr>
-                    <td><?php echo htmlspecialchars($name); ?></td>
-                    <td><?php echo htmlspecialchars($status); ?></td>
-                </tr>
-                <?php endforeach; ?>
-            </tbody>
-        </table>
 
         <h2>Service Links</h2>
         <ul>
