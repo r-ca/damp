@@ -14,15 +14,15 @@ services:
       - db_data:/var/lib/mysql
 
   web:
-    image: php:7.4-apache
+    build:
+      context: .
+      dockerfile: Dockerfile/apache/Dockerfile
     container_name: apache
     restart: always
     ports:
       - "80:80"
     volumes:
       - ./src:/var/www/html
-      - ./conf/web/php.ini:/usr/local/etc/php/php.ini
-      - ./conf/apache.conf:/etc/apache2/sites-available/000-default.conf
     depends_on:
       - db
       - phpmyadmin
