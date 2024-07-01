@@ -20,7 +20,7 @@ foreach ($dockerComposeServices as $service) {
 // Define service links
 $serviceLinks = [
     'Web Application' => '/',
-    'phpMyAdmin' => '/phpmyadmin'
+    'phpMyAdmin' => '/phpmyadmin/'
 ];
 
 ?>
