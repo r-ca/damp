@@ -26,6 +26,15 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     height: fit-content;
+    transition: all 0.3s ease; /* Container size change animation */
+    min-width: 512px;
+}
+
+/* if mobile */
+@media (max-width: 768px) {
+    .container {
+        min-width: auto;
+    }
 }
 
 h1 {
@@ -81,4 +90,47 @@ footer {
     position: absolute;
     bottom: 0;
     width: 100%;
+}
+
+/* Directory Tree Styles */
+ul {
+    list-style-type: none;
+    padding-left: 20px;
+    transition: all 0.3s ease; /* Directory size change animation */
+}
+
+.folder {
+    cursor: pointer;
+    color: var(--color-dark-brown);
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+}
+
+.folder:hover {
+    color: var(--color-bright-red);
+}
+
+li {
+    margin: 10px 0;
+}
+
+.file {
+    font-size: 1.2em;
+    text-decoration: none;
+    color: var(--color-dark-brown);
+    display: flex;
+    align-items: center;
+}
+
+.file:hover {
+    color: var(--color-bright-red);
+    text-decoration: underline;
+}
+
+.file i,
+.folder i {
+    width: 50px; /* Ensure all icons have the same width */
+    text-align: center;
+    margin-right: 10px;
 }
