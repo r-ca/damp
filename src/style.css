@@ -28,6 +28,8 @@ body {
     height: fit-content;
     transition: all 0.3s ease; /* Container size change animation */
     min-width: 512px;
+    max-height: 60vh;
+    overflow-y: scroll;
 }
 
 /* if mobile */
