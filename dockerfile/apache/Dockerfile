@@ -1,6 +1,10 @@
 # Dockerfile/apache/Dockerfile
 FROM php:7.4-apache
 
+# Add the PHP MySQL extension(driver)
+RUN apt-get update
+RUN docker-php-ext-install pdo_mysql
+
 # Enable Apache modules
 RUN a2enmod proxy proxy_http
 
